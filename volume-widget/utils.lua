@@ -13,7 +13,7 @@ local function split(string_to_split, separator)
     return t
 end
 
-function utils.extract_sinks_and_sources(pacmd_output)
+function utils.extract_sinks_and_sources(pactl_output)
     local sinks = {}
     local sources = {}
     local device
@@ -24,17 +24,17 @@ function utils.extract_sinks_and_sources(pacmd_output)
     local in_device = false
     local in_properties = false
     local in_ports = false
-    for line in pacmd_output:gmatch("[^\r\n]+") do
-        if string.match(line, 'source%(s%) available.') then
+    for line in pactl_output:gmatch("[^\r\n]+") do
+        if string.match(line, 'Source #') then
             in_sink = false
             in_source = true
         end
-        if string.match(line, 'sink%(s%) available.') then
+        if string.match(line, 'Sink #') then
             in_sink = true
             in_source = false
         end
 
-        if string.match(line, 'index:') then
+        if string.match(line, '[^v]... #') then
             in_device = true
             in_properties = false
             device = {
@@ -48,14 +48,14 @@ function utils.extract_sinks_and_sources(pacmd_output)
             end
         end
 
-        if string.match(line, '^\tproperties:') then
+        if string.match(line, '^\tProperties:') then
             in_device = false
             in_properties = true
             properties = {}
             device['properties'] = properties
         end
 
-        if string.match(line, 'ports:') then
+        if string.match(line, 'Ports:') then
             in_device = false
             in_properties = false
             in_ports = true
@@ -63,7 +63,7 @@ function utils.extract_sinks_and_sources(pacmd_output)
             device['ports'] = ports
         end
 
-        if string.match(line, 'active port:') then
+        if string.match(line, 'Active Port:') then
             in_device = false
             in_properties = false
             in_ports = false
