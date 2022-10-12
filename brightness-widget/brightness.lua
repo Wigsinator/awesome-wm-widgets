@@ -61,6 +61,11 @@ local function worker(user_args)
         set_brightness_cmd = "brightnessctl set %d%%" -- <level>
         inc_brightness_cmd = "brightnessctl set +" .. step .. "%"
         dec_brightness_cmd = "brightnessctl set " .. step .. "-%"
+    elseif program == 'brillo' then
+        get_brightness_cmd = 'brillo -G'
+        set_brightness_cmd = 'brillo -S %d' -- <level>
+        dec_brightness_cmd = 'brillo -U ' .. step .. "-q"
+        inc_brightness_cmd = 'brillo -A ' .. step .. "-q"
     else
         show_warning(program .. " command is not supported by the widget")
         return
