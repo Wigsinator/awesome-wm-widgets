@@ -12,7 +12,7 @@ local awful = require("awful")
 local naughty = require("naughty")
 local wibox = require("wibox")
 local gears = require("gears")
-local widget_themes = require("awesome-wm-widgets.github-contributions-widget.themes")
+local widget_themes = require("widgets.awesome-wm-widgets.github-contributions-widget.themes")
 
 local GET_CONTRIBUTIONS_CMD = [[bash -c "curl -s https://github-contributions.vercel.app/api/v1/%s]]
     .. [[ | jq -r '[.contributions[] ]]

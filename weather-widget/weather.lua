@@ -25,7 +25,7 @@ end
 -- default language is ENglish
 local LANG = gears.filesystem.file_readable(WIDGET_DIR .. "/" .. "locale/" ..
                                       SYS_LANG .. ".lua") and SYS_LANG or "en"
-local LCLE = require("awesome-wm-widgets.weather-widget.locale." .. LANG)
+local LCLE = require("widgets.awesome-wm-widgets.weather-widget.locale." .. LANG)
 
 
 local function show_warning(message)

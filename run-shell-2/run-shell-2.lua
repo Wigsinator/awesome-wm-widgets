@@ -14,7 +14,7 @@ local wibox = require("wibox")
 local gears = require("gears")
 local completion = require("awful.completion")
 
-local run = require("awesome-wm-widgets.run-shell-2.run")
+local run = require("widgets.awesome-wm-widgets.run-shell-2.run")
 
 local run_shell = awful.widget.prompt()
 
