@@ -28,7 +28,7 @@ local function worker(user_args)
 
     local args = user_args or {}
 
-    local icon = args.icon or HOME_DIR .. '/.config/awesome/awesome-wm-widgets/stackoverflow-widget/so-icon.svg'
+    local icon = args.icon or HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/stackoverflow-widget/so-icon.svg'
     local limit = args.limit or 5
     local tagged = args.tagged or 'awesome-wm'
     local timeout = args.timeout or 300

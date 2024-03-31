@@ -19,7 +19,7 @@ local beautiful = require("beautiful")
 local gfs = require("gears.filesystem")
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/bitbucket-widget/'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/bitbucket-widget/'
 
 local GET_PRS_CMD= [[bash -c "curl -s --show-error -n ]]
     .. [['%s/2.0/repositories/%s/%s/pullrequests]]

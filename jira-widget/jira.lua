@@ -113,7 +113,7 @@ local function worker(user_args)
     local args = user_args or {}
 
     local icon = args.icon or
-      HOME_DIR .. '/.config/awesome/awesome-wm-widgets/jira-widget/icon/jira-mark-gradient-blue.svg'
+      HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/jira-widget/icon/jira-mark-gradient-blue.svg'
     local host = args.host or show_warning('Jira host is unknown')
     local query = args.query or 'jql=assignee=currentuser() AND resolution=Unresolved'
     local timeout = args.timeout or 600

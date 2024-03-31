@@ -21,7 +21,7 @@ local gfs = require("gears.filesystem")
 local color = require("gears.color")
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/gitlab-widget/'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/gitlab-widget/'
 local GET_PRS_CMD= [[sh -c "curl -s --connect-timeout 5 --show-error --header 'PRIVATE-TOKEN: %s']]
     ..[[ '%s/api/v4/merge_requests?state=opened'"]]
 local DOWNLOAD_AVATAR_CMD = [[sh -c "curl -L --create-dirs -o %s/.cache/awmw/gitlab-widget/avatars/%s %s"]]

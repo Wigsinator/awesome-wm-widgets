@@ -31,7 +31,7 @@ local function worker(user_args)
 
     local args = user_args or {}
 
-    local icon = args.icons or HOME_DIR .. '/.config/awesome/awesome-wm-widgets/gerrit-widget/gerrit_icon.svg'
+    local icon = args.icons or HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/gerrit-widget/gerrit_icon.svg'
     local host = args.host or naughty.notify{
         preset = naughty.config.presets.critical,
         title = 'Gerrit Widget',
@@ -123,7 +123,7 @@ local function worker(user_args)
         if current_number_of_reviews > previous_number_of_reviews then
             widget:set_unseen_review(true)
             naughty.notify{
-                icon = HOME_DIR ..'/.config/awesome/awesome-wm-widgets/gerrit-widget/gerrit_icon.svg',
+                icon = HOME_DIR ..'/.config/awesome/modules/awesome-wm-widgets/gerrit-widget/gerrit_icon.svg',
                 title = 'New Incoming Review',
                 text = reviews[1].project .. '\n' .. get_name_by_user_id(reviews[1].owner._account_id) ..
                     reviews[1].subject .. '\n',

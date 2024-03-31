@@ -16,7 +16,7 @@ local gears = require("gears")
 local beautiful = require("beautiful")
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/docker-widget'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/docker-widget'
 local ICONS_DIR = WIDGET_DIR .. '/icons/'
 
 local LIST_CONTAINERS_CMD = [[bash -c "%s container ls -a -s -n %s]]

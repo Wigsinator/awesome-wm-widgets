@@ -19,7 +19,7 @@ local gs = require("gears.string")
 local awesomebuttons = require("awesome-buttons.awesome-buttons")
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/experiments/spotify-player/'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/experiments/spotify-player/'
 local ICON_DIR = WIDGET_DIR
 
 local spotify_player = {}

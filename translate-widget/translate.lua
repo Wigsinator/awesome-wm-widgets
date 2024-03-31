@@ -18,7 +18,7 @@ local gfs = require("gears.filesystem")
 
 local TRANSLATE_CMD = [[bash -c 'curl -s -u "apikey:%s" -H "Content-Type: application/json"]]
     ..[[ -d '\''{"text": ["%s"], "model_id":"%s"}'\'' "%s/v3/translate?version=2018-05-01"']]
-local ICON = os.getenv("HOME") .. '/.config/awesome/awesome-wm-widgets/translate-widget/gnome-translate.svg'
+local ICON = os.getenv("HOME") .. '/.config/awesome/modules/awesome-wm-widgets/translate-widget/gnome-translate.svg'
 
 --- Returns two values - string to translate and direction:
 -- 'dog enfr' -> 'dog', 'en-fr'

@@ -16,7 +16,7 @@ local awesomebuttons = require("awesome-buttons.awesome-buttons")
 
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/logout-popup-widget'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/logout-popup-widget'
 
 
 local w = wibox {

@@ -21,7 +21,7 @@ local gfs = require("gears.filesystem")
 local color = require("gears.color")
 
 local HOME_DIR = os.getenv("HOME")
-local WIDGET_DIR = HOME_DIR .. '/.config/awesome/awesome-wm-widgets/github-prs-widget/'
+local WIDGET_DIR = HOME_DIR .. '/.config/awesome/modules/awesome-wm-widgets/github-prs-widget/'
 local ICONS_DIR = WIDGET_DIR .. 'icons/'
 
 local AVATARS_DIR = HOME_DIR .. '/.cache/awmw/github-widget/avatars/'
